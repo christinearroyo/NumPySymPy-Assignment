@@ -1,5 +1,6 @@
-#! C:\Users\chrst\OneDrive\Documents\GitHub\NumPySymPy-Assignment\myenv\Scripts\python.exe
+from sympy import FiniteSet
 
+"""
 import numpy as np
 
 set_a = {1,3,5}
@@ -13,3 +14,4 @@ def is_subset(set_a, set_b):
     return result
 
 print("Is set_a a subset of set_b? ", is_subset(set_a, set_b))
+"""
