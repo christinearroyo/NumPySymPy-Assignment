@@ -1,13 +1,13 @@
-from sympy import FiniteSet
+import numpy as np
 
-def powerset(s):
-    s = FiniteSet(*s)
-    result = []
+def cartesian_product(*arrays):
+    grid = np.meshgrid(*arrays)
+    cartesian = np.stack(grid, axis=-1).reshape(-1, len(arrays))
+    return cartesian
 
-    for subset in s.powerset():
-        result.append(subset)
+main_dishes = ['Burger', 'Pizza']
+sides = ['Fries', 'Salad']
+drinks = ['Soda', 'Water']
 
-    return sorted(result)
-
-s = {1, 2, 3}
-print(powerset(s))
+meal_combinations = cartesian_product(main_dishes, sides, drinks)
+print(meal_combinations)
