@@ -1,15 +1,13 @@
-#! C:\Users\chrst\OneDrive\Documents\GitHub\NumPySymPy-Assignment\myenv\Scripts\python.exe
+from sympy import FiniteSet
 
-import numpy as np
+def powerset(s):
+    s = FiniteSet(*s)
+    result = []
 
-set_a = {1,3,5}
-set_b = {2, 1, 4, 3, 6, 5}
+    for subset in s.powerset():
+        result.append(subset)
 
-def is_subset(set_a, set_b): 
-    array_a = np.array(list(set_a))
-    array_b = np.array(list(set_b))
+    return sorted(result)
 
-    result = np.isin(array_a, array_b).all()
-    return result
-
-print("Is set_a a subset of set_b? ", is_subset(set_a, set_b))
+s = {1, 2, 3}
+print(powerset(s))
