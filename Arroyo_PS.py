@@ -1,5 +1,6 @@
 #! C:\Users\chrst\OneDrive\Documents\GitHub\NumPySymPy-Assignment\myenv\Scripts\python.exe
 
+#SET THEORY
 #SUBSETS
 import numpy as np
 
@@ -50,6 +51,8 @@ print(meal_combinations)
 
 
 
+
+#FUNCTIONS
 #TYPES OF FUNCTIONS
 import numpy as np
 
@@ -81,7 +84,6 @@ codomain = np.arange(0, 101)
 print(function_type(f, domain, codomain))
 
 
-
 #COMPOSITION OF FUNCTIONS
 import sympy as sp
 
@@ -94,8 +96,6 @@ composition = f.subs(x, g)
 print("Composition f(g(x)):", composition)
 
 print("Simplified composition:", sp.simplify(composition))
-
-
 
 
 #INVERSE FUNCTIONS
@@ -115,6 +115,10 @@ composition = f.subs(x, f_inv)
 print("Verification f(f^(-1)(x)):", sp.simplify(composition))
 
 
+
+
+
+#RELATIONS
 #PROPERTIES OF RELATIONS
 import numpy as np
 
@@ -139,7 +143,6 @@ print("Symmetric:", is_symmetric(relation))
 print("Transitive:", is_transitive(relation))
 
 
-
 #EQUIVALENCE OF RELATIONS
 def is_equivalence_relation(relation, set_A):
     return (is_reflexive(relation, set_A) and
@@ -150,7 +153,6 @@ set_A = {1, 2, 3}
 relation = {(1, 1), (2, 2), (3, 3), (1, 2), (2, 1)}
 
 print("Equivalence Relation:", is_equivalence_relation(relation, set_A))
-
 
 
 #PARTIAL ORDERINGS
@@ -169,8 +171,6 @@ set_A = {1, 2, 3}
 relation = {(1, 1), (2, 2), (3, 3), (1, 2), (1, 3)}
 
 print("Partial Ordering:", is_partial_ordering(relation, set_A))
-
-
 
 #HASSE DIAGRAM
 import matplotlib.pyplot as plt
@@ -203,6 +203,8 @@ draw_hasse_diagram(relation, set_A)
 
 
 
+
+#USING NUMPY AND SYMPY FOR SET, FUNCTION, AND RELATION OPERATIONS
 #SET OPERATIONS
 import numpy as np
 
